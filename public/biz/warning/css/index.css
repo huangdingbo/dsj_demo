@@ -1,0 +1,149 @@
+
+@charset "UTF-8";
+
+/*index*/
+.index_top{display: flex; padding: 30px 120px;justify-content: space-around}
+.early_warning_num{font-size: 40px;font-weight: bold;}
+.early_warning{position: relative;display: flex;align-items: center;}
+.early_warning_btn{font-size: 60px;cursor: pointer;width: 40px;display: flex;justify-content: center;height: 40px;background: url("../image/icon_btn_arrow.png") no-repeat; }
+.early_warning_img{width:76px;height:76px;display: inline-block}
+.early_warning_img2{position: absolute;top: -12px;left: -36px;width: 148px;animation: rotate 1s linear infinite;-webkit-animation:rotate linear 1s infinite;}
+.early_warning_right{display: inline-block;vertical-align: middle;padding: 20px;font-size: 20px;}
+
+.index_left{    width: 800px;height: 80%;display: inline-block;position: relative}
+.warning_map_label{display: flex;position: absolute;bottom: 30px;right: 0}
+.label_item{margin-right:20px;display: flex}
+.label_item img{height:24px;}
+
+.index_right{display: inline-block;height: 80%;width: 800px;    position: absolute}
+.warning_chart{height:65%;}
+.warning_line{height:35%;}
+
+.shequWarning{text-align: center}
+
+
+/*社会治理*/
+.index_top.society_top{  margin: 30px 200px;height:180px;}
+.society_warning_right{padding:20px;}
+.society_mid{position: relative;height:80%;}
+.society_map,.society_chart{width:100%;height:100%;}
+.society_chart{display: none;}
+.society_tab{top:0;right:200px;position: absolute;z-index: 10;display: flex;width: 120px;justify-content: space-around;}
+.society_tab .xb_icon.map,.society_tab .xb_icon.chart-area{font-size: 25px;cursor: pointer}
+.society_chart_left{height:60%}
+.society_chart_left,.society_chart_right{width:49%;margin: 0 auto}
+
+
+
+
+
+@keyframes rotate
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+/*阈值*/
+.quzhi-detail{    position: absolute;left: 50%;    margin-top: 0;}
+.quzhi-detail .rank-tab-item,.quzhi-shequ .rank-tab-item{width: 140px;text-align: center;height: 40px;line-height: 40px;}
+.quzhi-popDetail{position: absolute;right:100px;padding:5px 15px;border: 2px solid rgb( 123, 212, 252 );
+    box-shadow: inset 0 0 20px 0 #1570a0;border-radius: 5px;color: #fff;cursor: pointer}
+.quzhiPop-con{padding:30px 80px 0;color:#fff;}
+.quzhi-top{position:relative;display: flex;justify-content: space-around;width: 100%;align-items: center; margin: 60px 0;}
+.quzhi-top-list{padding:20px 60px;border: 1px solid #154e6b;border-radius: 5px; width: 400px;height:200px;position: relative;cursor: pointer }
+.quzhi-top-list.ac{background:#098ad3;}
+.quzhi-list-title{text-align: center;font-size: 40px;color:#ffffff;font-weight: bold;position: relative}
+.quzhi-list-cont{margin-top:20px;font-size: 20px;text-align: center}
+.quzhi-bottom-title{    display: flex;justify-content: space-between;}
+.quzhi-bottom-day{font-size: 30px;}
+.quzhi-bottom-cont{height:380px;display: flex;justify-content: space-around}
+.quzhi-bottom-img{display: flex;align-items: center;flex-direction: column;    justify-content: flex-end;}
+.quzhi-bottom-img-name{font-size: 36px;margin-top:20px;}
+.tip_box{position: absolute;top:30%;left:40%;background: #030b14;border-radius: 5px;border: 1px solid ;display: none;
+width: 400px;height: 300px; color: #fff;text-align: center }
+.tip_box_title{padding:30px;font-size: 30px;}
+.tip_box_cont{font-size: 18px;    padding: 0 35px 50px;border-bottom:1px solid;line-height: 36px; }
+.tip_box_bot{display: flex;justify-content: space-around;    padding: 28px;}
+.tip_box_left,.tip_box_right{padding:5px 20px;border-radius: 5px; cursor: pointer }
+.tip_box_left{background: #33404f}
+.tip_box_right{background:#0068b5}
+
+/*阈值-中心站预警*/
+.quzhi-shequ.rank-tab{margin-top:0;}
+.quzhiPop-left{width: 60%;display: inline-block}
+.quzhiPop-right{width: 35%;display: inline-block}
+.quzhiPop-left-top-cont,.quzhiPop-left-bottom-cont{height:300px;}
+.left-bottom-chart{height:240px;}
+.quzhiPop-right-top-title{   display: flex;line-height: 40px;justify-content: flex-end;margin-bottom: 20px;}
+.quzhiPop-right-top-cont{color: #d6e9ff;font-size: 24px;}
+.quzhiPop-right-list{padding:15px 0 ;}
+.quzhiPop-right-result{font-size: 20px;color: #d49e4e;}
+.filtrate-month{margin:0 5px;position: relative;width: 150px;
+    padding: 0 8px 0 10px;height: 40px;line-height: 36px;text-align: left;cursor: pointer;box-sizing: border-box;
+    border: 2px solid rgb( 123, 212, 252 );box-shadow: inset 0 0 20px 0 #1570a0;border-radius: 5px;background: rgba( 11, 48, 69, 0.949 );}
+.filtrate-month-list{background: rgba( 11, 48, 69, 0.949 );padding:5px 10px;margin-top:5px;border: 2px solid rgb( 123, 212, 252 );border-top:none;position: absolute; }
+.quzhiPop-right-bottom{text-align: center;padding: 100px 152px;}
+.quzhiPop-name{color: #d6e9ff;font-size: 24px;margin-bottom:30px; }
+.quzhiPop-danwei{font-size: 80px;line-height: 200px;}
+.quzhiPop-right-bottom-cont{height:200px;width:260px;font-size: 80px;line-height: 200px;position: relative;border: 4px solid;text-align: center;    background: #052638; }
+.leftTop-table{border-radius: 5px;border:1px solid #c4dfff;display: inline-block;background: #030912 }
+.table-list{display: flex}
+.table-name{color: #2ab6fe;}
+.leftTop-table3 .table-item{border-bottom: none;}
+.leftTop-table1 .table-item:last-child,.leftTop-table2 .table-item:last-child,.leftTop-table3 .table-item:last-child{border-right: none;}
+.table-item,.table-name{padding:10px;text-align: center;width: 180px;height: 70px;display: flex;justify-content: center;align-items: center;
+    border-right: 1px solid #687b92;border-bottom: 1px solid #687b92;font-size: 22px;}
+.quzhi-screen{    position: relative;padding: 0 8px 0 10px;height: 40px;line-height: 36px;text-align: left;cursor: pointer;box-sizing: border-box;
+    border: 2px solid rgb( 123, 212, 252 );box-shadow: inset 0 0 20px 0 #1570a0;border-radius: 5px;background-color: rgba( 11, 48, 69, 0.949 );
+    margin: 10px;color: #fff;    width: 40px;}
+.quzhi-shequ-list{width: 200px; position: absolute; left: -160px;top: 50px;height: 500px;background: #123863;border:1px solid rgb( 123, 212, 252 );padding: 10px;
+    border-radius: 5px;overflow: auto}
+.shequ-list-item{padding:10px 0 ;font-size: 20px;}
+.quzhi-month-list{position: absolute;top: 105px;left: 642px;}
+.quzhi-month-box{display: flex;flex-wrap: wrap}
+
+/*阈值 网格员*/
+.gridyuzhi-center{width: 100% ;text-align: center}
+.gridyuzhi-top-left{width: 55%;height: 100%;float: left;text-align: left}
+.gridyuzhi-top-right{width: 40%;height: 100%;float: right;font-size: 20px;text-align: left}
+
+/*网格员和社区排名*/
+.ad_cont_left{ width: 35%;float: left;    padding: 80px 60px;}
+.ad_cont_left .common_list_item {width: 30%}
+.ad_cont_right .common_list_item{width: 18%}
+.ad_cont_right{width: 60%;float: right;padding: 80px 60px;color: #fff;}
+.ad_cont_right .common_list_cont,.ad_cont_left .common_list_cont{height: 640px;overflow: auto;}
+.shequ-gridRank .common_list_cont{height: 640px;overflow: auto;}
+.shequ-gridRank .common_list_item{width: 19%}
+
+/*首页的预警灯放大75%*/
+.index_top .early_warning_img-75{width: 101px;height: 101px;}
+.index_top .early_warning_img2-75{top: -36px;left: -48px;width: 197px;}
+.index_top .early_warning_right{padding-left: 40px;}
+
+/*小黃圆点*/
+.border_yellow{display: inline-block;width: 14px;height: 14px;border-radius: 7px;background-color: #fdb952;}
+
+/*数字背景图*/
+.quzhi-top-list{overflow: hidden;}
+.quzhi-list-title .numBgImg{position: absolute;top: -36px;left: -102px;}
+.ac-boxshadow{background: #098ad3;box-shadow: 0 0 20px #145f87, 0 0 20px #145f87, 0 0 20px #145f87;}

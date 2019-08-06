@@ -1,0 +1,142 @@
+<?php
+/**
+ * User: fu
+ * Date: 2017/12/9
+ * Time: 17:12
+ */
+
+use biz\AuthManager;
+use CC\action\module\common\auth\AuthType;
+use CC\util\common\server\ConfigDataServer;
+use CC\util\common\server\dsj\server\BaseConfigEnum;
+use CC\util\common\server\SessionAbs;
+use module\data\cateData\enum\HotColorEnum;
+use module\data\cateData\server\ProjectServer;
+use module\setting\platform\enum\PlatformConfigEnum;
+use module\setting\platform\server\PlatformConfigServer;
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo $this->getPageTitle() ?></title>
+    <link href="<?php echo $baseUrl; ?>/public/biz/common/css/common.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $baseUrl; ?>/public/biz/plug/icon/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $baseUrl; ?>/public/biz/plug/flipcounter/flipcounter.css" rel="stylesheet" type="text/css">
+
+    <script src="<?php echo $baseUrl; ?>/public/biz/plug/jquery/jquery.min.js"></script>
+    <script src="<?php echo $baseUrl; ?>/public/biz/plug/echart/echarts.min.js"></script>
+    <script src="http://echarts.baidu.com/resource/echarts-liquidfill-1.0.4/dist/echarts-liquidfill.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.4.2&key=a3b3d16e95cfd8d858300d093f839c5f&plugin=AMap.ControlBar,AMap.MouseTool,AMap.PolyEditor"></script>
+    <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <script type="text/javascript" src="http://a.amap.com/jsapi_demos/static/resource/heatmapData.js"></script>
+
+    <script src="<?php echo $baseUrl; ?>/public/plug/imgview/imgview.js"></script>
+
+    <script type="text/javascript" src="<?php echo $baseUrl; ?>/public/biz/common/DatePicker/WdatePicker.js"></script>
+
+
+
+    <script type="text/javascript">
+        var baseUrl = '<?php echo $baseUrl ?>';
+        var common_module_conf = {
+            user_id: '<?php echo (string)\biz\Session::getUserID();?>',
+            no_search_select_cate_data_id_list : ['2','4','5','6','7','9','23'], //不需要数据清单的cate_data_id
+            tip_conf: {
+                web_ren_kou_zi_liao:'抱歉，您没有权限查看该资料，请联系管理员开通权限。'
+            },
+            auth_conf:{
+                web_ren_kou_zi_liao:'<?php echo AuthType::getAuthType(AuthManager::WEB_REN_KOU_ZI_LIAO)->getInt() ;?>'
+            },
+            platform_conf:{
+                top_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::TOP_NAME) ;?>',
+                dsj_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::DSJ_INDEX_NAME) ;?>',
+                sangao_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::SANGAO_INDEX_NAME) ;?>',
+                zf_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::ZF_INDEX_NAME) ;?>',
+                hw_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::HW_INDEX_NAME) ;?>',
+                zhatu_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::ZHATU_INDEX_NAME) ;?>',
+                hedao_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::HEDAO_INDEX_NAME) ;?>',
+                ludeng_index_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::LUDENG_INDEX_NAME) ;?>',
+                platform_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::PLATFORM_NAME) ;?>',
+                core_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::CORE_NAME) ;?>',
+                judged_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::JUDGED_NAME) ;?>',
+                warning_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::WARNING_NAME) ;?>',
+                decision_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::DECISION_NAME) ;?>',
+                report_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::REPORT_NAME) ;?>',
+                databook_name:'<?php echo PlatformConfigServer::get(PlatformConfigEnum::DATABOOK_NAME) ;?>',
+                line_config_list:<?php echo json_encode(PlatformConfigServer::getLineConfigList()) ;?>
+            },
+            module_switch_popup:{
+                url_conf:<?php echo json_encode(\biz\url\UrlConf::getSysNavUrl()) ?>,
+                setting_url:'<?php echo $this->genurl('/admin/setting/index/index',\biz\url\UrlConf::getEnterAdminParams()) ?>',
+                logout_url:'<?php echo $this->genurl('core/login/logout') ?>',
+            },
+            case_conf:{
+                hot_color:{
+                    shimin:<?php echo json_encode(HotColorEnum::getValueByIndex('红') )?>,
+                    xc:<?php echo json_encode(HotColorEnum::getValueByIndex('紫') )?>,
+                }
+            },
+            demo_mode:{
+                open:<?php echo (int)ConfigDataServer::queryByName(BaseConfigEnum::DEMO_SWITCH) ?>,
+
+            },
+            warning_conf:{
+                demo_add_url:'<?php echo ProjectServer::getHostByIdstr('yujing') ?>/api/warning/stat/addDemoData'
+            },
+            project_conf:{
+                shijian:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('shijian') ?>',
+                },
+                zhatu:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('zhatu') ?>',
+                },
+                shuiwu:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('shuiwu') ?>',
+                },
+                ludeng:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('ludeng') ?>',
+                },
+                chengshi:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('chengshi') ?>',
+                },
+                hedao:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('hedao') ?>',
+                },
+                web:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('web') ?>',
+                },
+                huanwei:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('huanwei') ?>',
+                },
+                zhifa:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('zhifa') ?>',
+                },
+                jiedao:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('jiedao') ?>',
+                },
+                renkou:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('renkou') ?>',
+                },
+                yujing:{
+                    host:'<?php echo ProjectServer::getHostByIdstr('yujing') ?>',
+                }
+            }
+        };
+    </script>
+    <script type="text/javascript" src="<?php echo $baseUrl; ?>/public/biz/plug/popup/js/popup.js"></script>
+
+    <script src="<?php echo $baseUrl; ?>/public/biz/common/js/chart.js"></script>
+    <script type="text/javascript" src="<?php echo $baseUrl; ?>/public/biz/common/js/common.js"></script>
+    <script type="text/javascript" src="<?php echo $baseUrl; ?>/public/biz/common/js/module.js"></script>
+    <script type="text/javascript" src="<?php echo $baseUrl; ?>/public/biz/plug/flipcounter/flipcounter.js"></script>
+
+</head>
+<body>
+
+<?php echo $content ?>
+
+
+</body>
+</html>

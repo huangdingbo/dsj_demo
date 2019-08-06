@@ -1,0 +1,4 @@
+.header_logo{background-image: url("../images/cms_logo.png");float: left; width:240px;}
+.back-is{display: inline-block;border-left: 1px solid #4a525f; height:100%;vertical-align: middle;float: left; margin-right:20px;}
+.back_a{float: left; padding-right:20px;}
+.back_a .back{ font-size: 20px; color: #9299a3;}

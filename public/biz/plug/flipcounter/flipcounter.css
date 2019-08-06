@@ -1,0 +1,163 @@
+.flip_content {
+    *zoom: 1;
+    display: inline-block;
+    border: 2px solid #12b0fa;
+    background: #252b2f;
+    border-radius: 10px;
+    padding: 10px;
+}
+.flip_content:before,
+.flip_content:after {
+
+}
+.flip_content:after {
+    clear: both;
+}
+.flip_content {
+    font: 14px 'Ubuntu', sans-serif;
+}
+
+.counter-wrapper {
+
+    position: relative;
+
+
+}
+.flip-counter {
+    position: relative;
+    list-style-type: none;
+
+}
+.flip-counter li {
+    float: right;
+}
+
+.flip-counter.default .digit {
+    position: relative;
+    z-index: 0;
+    width: 60px;
+    height: 80px;
+    margin-left: 10px;
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(3%,#515B62), color-stop(5%,#282b2f), color-stop(100%,#282b2f));;
+    text-align: center;
+    line-height: 0;
+    -webkit-text-stroke: 2px;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow:
+            /*-1px -1px 0  #006898,*/
+            0 0 0px #006898,
+            0 0 10px  #006898,
+            0 0 20px  #006898;
+}
+.flip-counter.default .digit:last-child {
+    margin-left: 0;
+}
+.flip-counter.default .digit span {
+    position: absolute;
+    left: 0;
+    height: 40px;
+    width: 60px;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-indent: 2px;
+    background:  -webkit-gradient(linear, left top, left bottom, color-stop(1%,#515B62), color-stop(5%,#282b2f), color-stop(100%,#282b2f));;
+    color: #6fcbff;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.flip-counter.default .digit span.front {
+    top: 0;
+    padding-top: 40px;
+}
+.flip-counter.default .digit span.back {
+    bottom: 0;
+}
+.flip-counter.default .digit .line {
+    position: absolute;
+    z-index: 10;
+    height: 40px;
+    width: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.7);
+}
+.flip-counter.default .digit .hinge-wrap {
+    z-index: 5;
+    position: relative;
+    overflow: visible;
+    -webkit-perspective: 300px;
+    -moz-perspective: 300px;
+    -ms-perspective: 300px;
+    perspective: 300px;
+}
+.flip-counter.default .digit .hinge {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    -moz-transition: -moz-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.flip-counter.default .digit .hinge span {
+    height: 0;
+    z-index: 5;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-counter.default .digit .hinge span.front {
+    padding-top: 40px;
+}
+.flip-counter.default .digit .hinge span.back {
+    height: 40px;
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.flip-counter.default .digit.animate .hinge {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.flip-counter.default .digit-delimiter {
+    margin-right: -10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color:#6fcbff;
+    /*color: black;*/
+    text-indent: 3.33333333px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.no-csstransforms3d span.back {
+    display: none;
+}
+
+.flip_content_name{color:#b2b2b2;padding-top:5px;}

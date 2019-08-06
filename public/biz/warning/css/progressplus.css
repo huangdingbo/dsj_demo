@@ -1,0 +1,9 @@
+﻿.progressplus-list{display:flex;flex-direction:row;margin-top: 10px;width: 100%}
+.progressplus-sequece{display: inline-block;width: 40px;vertical-align: middle;color: #00a0e9}
+.progressplus-name{width: 75px;color: #00a0e9;vertical-align: middle}
+.progressplus-bar-content{display:inline-block;width:60%;border-radius:3px;background-color: transparent;vertical-align: middle;position: relative;padding-right: 30px;margin-left:5px;}
+.progressplus-bar{width:0;height:15px;border-radius:3px;display: inline-block;vertical-align: middle;background-image:-webkit-linear-gradient(to right, #00a0ea 85%, #00bff3); background-image:linear-gradient(to right,#00a0ea 85%,#00bff3);position: relative}
+.progressplus-value{display: inline-block;vertical-align: middle;position: absolute;color:#fff;right: -25px;}
+.progressplus-percent{font-size:13px;}
+.progressplus-otherinfo{font-size:13px;margin-left: 10px;}
+

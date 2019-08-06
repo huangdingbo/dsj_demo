@@ -1,0 +1,75 @@
+2019-08-02 00:20:48 [error] 
+[exception.CInteriorException]  exec() has been disabled for security reasons (/data/websites/CC2/util/common/server/BgTaskServer.php:208)
+Stack trace:
+#0 /data/websites/CC2/util/common/server/BgTaskServer.php(194): execCommand()
+#1 /data/websites/CC2/action/module/common/http/bgtask/BgtaskRunInterceptors.php(29): execCommandRun()
+#2 /data/websites/CC2/base/CApp.php(196): CC\action\module\common\http\bgtask\BgtaskRunInterceptors->handle()
+#3 /data/websites/CC2/base/CApp.php(248): CApp->execHttpInterceptor()
+#4 /data/websites/dsj_demo/index.php(17): CApp->run()
+
+
+REQUEST_URI=  /dsj_demo/admin/core/login/index
+
+POST 数据：   array (
+)
+
+==========================================================================
+
+2019-08-02 00:33:27 [error] 
+[exception.CDBException]  exception 'CDBException' with message 'SQLSTATE[08004] [1040] Too many connections' in /data/websites/CC2/db/CDBConnect.php:33
+mysql:host=47.97.11.193;dbname=dsj_wjjkq_show
+
+Stack trace:
+#0 /data/websites/CC2/db/CModel.php(87): CDBConnect->getPdo()
+#1 /data/websites/CC2/db/CModel.php(337): CModel->getConnect()
+#2 /data/websites/CC2/db/CModel.php(275): CModel->_queryIn('ALL', Array)
+#3 /data/websites/dsj_demo/protected/biz/db/DbProtectInterceptor.php(63): CModel->queryAllSql('select * from i...')
+#4 /data/websites/CC2/base/CApp.php(196): biz\db\DbProtectInterceptor->handle(Object(CRequest), Object(CNext))
+#5 /data/websites/CC2/base/CApp.php(248): CApp->execHttpInterceptor()
+#6 /data/websites/dsj_demo/index.php(17): CApp->run()
+#7 {main}
+
+REQUEST_URI=  /dsj_demo/admin/core/login/index
+
+POST 数据：   array (
+  'account' => 'admin',
+  'pass' => 'admin',
+)
+
+==========================================================================
+
+2019-08-02 00:33:31 [error] 
+[exception.CDBException]  exception 'CDBException' with message 'SQLSTATE[08004] [1040] Too many connections' in /data/websites/CC2/db/CDBConnect.php:33
+mysql:host=47.97.11.193;dbname=dsj_wjjkq_show
+
+Stack trace:
+#0 /data/websites/CC2/db/CModel.php(87): CDBConnect->getPdo()
+#1 /data/websites/CC2/db/CModel.php(337): CModel->getConnect()
+#2 /data/websites/CC2/db/CModel.php(262): CModel->_queryIn('ONE', Array)
+#3 /data/websites/CC2/db/CModel.php(551): CModel->querySql('select t.* from...', Array)
+#4 /data/websites/CC2/db/CModel.php(208): CModel->_queryOn('1 and (  `accou...', Array, 't.*', true, '')
+#5 /data/websites/CC2/db/base/core/CDbCommand.php(100): CModel->query('1 and (  `accou...', Array, 't.*', '')
+#6 /data/websites/CC2/db/base/select/ItemModel.php(19): CC\db\base\core\CDbCommand::query(Object(CC\db\base\select\ItemModel), Array)
+#7 /data/websites/CC2/db/base/select/ItemModel.php(27): CC\db\base\select\ItemModel->getData()
+#8 /data/websites/CC2/action/module/core/login/CoreLoginIndexAdminAction.php(171): CC\db\base\select\ItemModel->execute()
+#9 /data/websites/CC2/action/module/core/login/CoreLoginIndexAdminAction.php(199): CC\action\module\core\login\CoreLoginIndexAdminAction->getUser()
+#10 /data/websites/CC2/action/base/CAction.php(157): CC\action\module\core\login\CoreLoginIndexAdminAction->onCheck(Array, NULL)
+#11 /data/websites/CC2/action/module/core/login/CoreLoginIndexAdminAction.php(138): CAction->doCheck(Array, Object(CNext))
+#12 /data/websites/CC2/action/base/CAction.php(125): CC\action\module\core\login\CoreLoginIndexAdminAction->doCheck(Array, Object(CNext))
+#13 [internal function]: CAction->executeInner(Object(CRequest))
+#14 /data/websites/CC2/route/process/CActionProcess.php(74): call_user_func_array(Array, Array)
+#15 /data/websites/CC2/route/process/CRequestProcess.php(100): CC\route\process\CActionProcess->onProcess(Object(CC\action\module\core\login\CoreLoginIndexAdminAction))
+#16 /data/websites/CC2/base/CApp.php(285): CC\route\process\CRequestProcess->process()
+#17 /data/websites/CC2/base/CApp.php(253): CApp->processRequest()
+#18 /data/websites/dsj_demo/index.php(17): CApp->run()
+#19 {main}
+
+REQUEST_URI=  /dsj_demo/admin/core/login/index
+
+POST 数据：   array (
+  'account' => 'admin',
+  'pass' => 'admin',
+)
+
+==========================================================================
+
