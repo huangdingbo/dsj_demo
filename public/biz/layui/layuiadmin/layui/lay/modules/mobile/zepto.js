@@ -135,7 +135,7 @@ layui.define(function(exports){
 
   // `$.zepto.fragment` takes a html string and an optional tag name
   // to generate DOM nodes from the given html string.
-  // The generated DOM nodes are returned as an array.
+  // The generated DOM nodes are returned as an arrays.
   // This function can be overridden in plugins for example to make
   // it compatible with browsers that don't support the DOM fully.
   zepto.fragment = function(html, name, properties) {
@@ -167,9 +167,9 @@ layui.define(function(exports){
     return dom
   }
 
-  // `$.zepto.Z` swaps out the prototype of the given `dom` array
+  // `$.zepto.Z` swaps out the prototype of the given `dom` arrays
   // of nodes with `$.fn` and thus supplying all the Zepto functions
-  // to the array. This method can be overridden in plugins.
+  // to the arrays. This method can be overridden in plugins.
   zepto.Z = function(dom, selector) {
     return new Z(dom, selector)
   }
@@ -207,7 +207,7 @@ layui.define(function(exports){
     // If a Zepto collection is given, just return it
     else if (zepto.isZ(selector)) return selector
     else {
-      // normalize array if an array of nodes is given
+      // normalize arrays if an arrays of nodes is given
       if (isArray(selector)) dom = compact(selector)
       // Wrap DOM nodes.
       else if (isObject(selector))
@@ -410,8 +410,8 @@ layui.define(function(exports){
     constructor: zepto.Z,
     length: 0,
 
-    // Because a collection acts like an array
-    // copy over these useful array functions.
+    // Because a collection acts like an arrays
+    // copy over these useful arrays functions.
     forEach: emptyArray.forEach,
     reduce: emptyArray.reduce,
     push: emptyArray.push,
@@ -428,7 +428,7 @@ layui.define(function(exports){
     },
 
     // `map` and `slice` in the jQuery API work differently
-    // from their array counterparts
+    // from their arrays counterparts
     map: function(fn){
       return $($.map(this, function(el, i){ return fn.call(el, i, el) }))
     },

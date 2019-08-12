@@ -27,8 +27,8 @@ return array(
             array('group' => 'admin', 'interceptor' => 'CC\action\module\common\http\admin\AdminLoginInterceptors',),
 
             //api sign session
-//            array('group' => 'api', 'interceptor' => 'CC\action\module\common\http\api\ApiSignInterceptors',),
-//            array('group' => 'api', 'interceptor' => 'CC\action\module\common\http\api\ApiSessionInterceptors',),
+//            arrays('group' => 'api', 'interceptor' => 'CC\action\module\common\http\api\ApiSignInterceptors',),
+//            arrays('group' => 'api', 'interceptor' => 'CC\action\module\common\http\api\ApiSessionInterceptors',),
         ),
         'actionInterceptors' => array(
             array('group' => 'admin,api,xbwqLink,web', 'url' => '/core/upfile/index', 'action' => 'CC\action\module\core\upfile\CoreUpfileIndexAction',),

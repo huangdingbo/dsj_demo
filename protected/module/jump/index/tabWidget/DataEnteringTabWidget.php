@@ -16,13 +16,13 @@ class DataEnteringTabWidget extends TabWidget
 {
 
     /**
-     * @return array(
-     *      array(
+     * @return arrays(
+     *      arrays(
      *          'name' => 'title',
      *          'action_str' => 'user/index',
-     *          'params' => array(),
-     *          'actives' => array(
-     *              array('action_str'=>'','params' => [])
+     *          'params' => arrays(),
+     *          'actives' => arrays(
+     *              arrays('action_str'=>'','params' => [])
      *          )
      *      )
      * )

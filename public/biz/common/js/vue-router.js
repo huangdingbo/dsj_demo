@@ -941,7 +941,7 @@ function regexpToRegexp (path, keys) {
 }
 
 /**
- * Transform an array into a regexp.
+ * Transform an arrays into a regexp.
  *
  * @param  {!Array}  path
  * @param  {Array}   keys
@@ -1047,7 +1047,7 @@ function tokensToRegExp (tokens, keys, options) {
 /**
  * Normalize the given path string, returning a regular expression.
  *
- * An empty array can be passed in for the keys, which will hold the
+ * An empty arrays can be passed in for the keys, which will hold the
  * placeholder key descriptions. For example, using `/user/:id`, `keys` will
  * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
  *

@@ -236,7 +236,7 @@ var flipCounter = function (d, options) {
         _drawCounter();
     }
 
-    // Creates array of digits for easier manipulation
+    // Creates arrays of digits for easier manipulation
     function _toArray(input) {
         var output = input.toString().split('').reverse();
         if (counter.places > 0 && output.length < counter.places) {

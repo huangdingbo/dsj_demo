@@ -22,9 +22,9 @@ class AuthManager extends AuthManagerAbs
 
 
     /**
-     * @return array
-     *  array(
-     *   array('action'=>'/basic/company/edit','params'=>array(),'user_classify' => array(UserServer::USER_CLASSIFY_SUPER_ADMIN)),
+     * @return arrays
+     *  arrays(
+     *   arrays('action'=>'/basic/company/edit','params'=>arrays(),'user_classify' => arrays(UserServer::USER_CLASSIFY_SUPER_ADMIN)),
      * )
      */
     protected function getNoCheckConf()
@@ -41,17 +41,17 @@ class AuthManager extends AuthManagerAbs
     }
 
     /**
-     * @return array
-     *         array(
-     *             array(
+     * @return arrays
+     *         arrays(
+     *             arrays(
      *              'name' => '传单管理',
      *              'key' => 'cdgl',
-     *              'auth' => array(
-     *                  self::AUTH_FLYER_LIST => array(
+     *              'auth' => arrays(
+     *                  self::AUTH_FLYER_LIST => arrays(
      *                      'name' => '传单列表',
-     *                      'user_classify' => array(UserServer::USER_CLASSIFY_ADMIN,UserServer::USER_CLASSIFY_EMPLOYEE),
-     *                      'urls' => array(
-     *                           array('groups' => 'admin', 'action' => '/flyer/flyer/index','params' => array()),
+     *                      'user_classify' => arrays(UserServer::USER_CLASSIFY_ADMIN,UserServer::USER_CLASSIFY_EMPLOYEE),
+     *                      'urls' => arrays(
+     *                           arrays('groups' => 'admin', 'action' => '/flyer/flyer/index','params' => arrays()),
      *                      )
      *                  )
      *              )

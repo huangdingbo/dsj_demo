@@ -6,7 +6,7 @@
  */
 return array(
     'db' => array(
-        'dsn' => 'mysql:host=127.0.0.1;dbname=test',
+        'dsn' => 'mysql:host=127.0.0.1;dbname=dsj_demo',
         'username' => 'root',
         'password' => '63z0jYLOQ74EidGa1cs4'
     ),
@@ -16,28 +16,10 @@ return array(
         "aaa" => "aaaaaa",
         'interface_url' => 'http://qwxz.xbwq.com.cn/wqinterface',
 
-        'db_sj' => array(
-            'dsn' => 'mysql:host=47.97.11.193;dbname=dsj_wjjkq_sj',
+        'test_database' => array(
+            'dsn' => 'mysql:host=127.0.0.1;dbname=test',
             'username' => 'root',
-            'password' => 'BigData6771512fa.@'
-        ),
-
-        'db_test' => array(
-            'dsn' => 'mysql:host=47.97.11.193;dbname=dsj_wjjkq_show',
-            'username' => 'root',
-            'password' => 'BigData6771512fa.@',
-        ),
-//
-//        'db_sangao' => array(
-//            'dsn' => 'mysql:host=192.168.1.35;dbname=zxdsj_sangao',
-//            'username' => 'root',
-//            'password' => '123456',
-//        ),
-//
-        'base_data_db' => array(
-            'dsn' => 'mysql:host=47.97.11.193;dbname=dsj_wjjkq_web',
-            'username' => 'root',
-            'password' => 'BigData6771512fa.@',
+            'password' => '63z0jYLOQ74EidGa1cs4'
         ),
 
         'memcache_conf' => array(

@@ -362,9 +362,9 @@
         return key ? key.toLowerCase().replace('_', '-') : key;
     }
 
-    // pick the locale from the array
+    // pick the locale from the arrays
     // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+    // substring from most specific to least, but move to the next arrays item if it's a more specific variant than the current root
     function chooseLocale(names) {
         var i = 0, j, next, locale, split;
 
@@ -379,7 +379,7 @@
                     return locale;
                 }
                 if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
-                    //the next array item is better than a shallower substring of this one
+                    //the next arrays item is better than a shallower substring of this one
                     break;
                 }
                 j--;
@@ -1346,8 +1346,8 @@
         return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
     }
 
-    // convert an array to a date.
-    // the array should mirror the parameters below
+    // convert an arrays to a date.
+    // the arrays should mirror the parameters below
     // note: all values past the year are optional and will default to the lowest possible value.
     // [year, month, day , hour, minute, second, millisecond]
     function configFromArray (config) {
@@ -1479,7 +1479,7 @@
         config._a = [];
         getParsingFlags(config).empty = true;
 
-        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        // This arrays is used to make a Date, either with `new Date` or `Date.UTC`
         var string = '' + config._i,
             i, parsedInput, tokens, token, skipped,
             stringLength = string.length,
@@ -1563,7 +1563,7 @@
         }
     }
 
-    // date from string and array of format strings
+    // date from string and arrays of format strings
     function configFromStringAndArray(config) {
         var tempConfig,
             bestMoment,
@@ -1738,8 +1738,8 @@
     // Pick a moment m from moments so that m[fn](other) is true for all
     // other. This relies on the function fn to be transitive.
     //
-    // moments should either be an array of moment objects or an array, whose
-    // first element is an array of moment objects.
+    // moments should either be an arrays of moment objects or an arrays, whose
+    // first element is an arrays of moment objects.
     function pickBy(fn, moments) {
         var res, i;
         if (moments.length === 1 && isArray(moments[0])) {

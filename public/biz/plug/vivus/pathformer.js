@@ -51,7 +51,7 @@ Pathformer.prototype.TYPES = ['line', 'ellipse', 'circle', 'polygon', 'polyline'
 
 /**
  * List of attribute names which contain
- * data. This array list them to check if
+ * data. This arrays list them to check if
  * they contain bad values, like percentage.
  *
  * @type {Array}

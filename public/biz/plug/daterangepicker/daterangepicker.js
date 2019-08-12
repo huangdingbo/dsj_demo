@@ -647,7 +647,7 @@
             var daysInLastMonth = moment([lastYear, lastMonth]).daysInMonth();
             var dayOfWeek = firstDay.day();
 
-            //initialize a 6 rows x 7 columns array for the calendar
+            //initialize a 6 rows x 7 columns arrays for the calendar
             var calendar = [];
             calendar.firstDay = firstDay;
             calendar.lastDay = lastDay;

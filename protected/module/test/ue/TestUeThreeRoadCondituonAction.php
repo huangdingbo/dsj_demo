@@ -11,6 +11,7 @@ use Exception;
 
 class TestUeThreeRoadCondituonAction extends \CAction
 {
+    private $flag = '3';
     private $map = [
         '东三环路一段',
         '东三环路二段',
@@ -210,8 +211,10 @@ class TestUeThreeRoadCondituonAction extends \CAction
                     ->addData([
                         'content' => $data,
                         'insert_time' => date('Y-m-d H:i:s'),
+                        'flag' => $this->flag,
                     ])
                     ->execute();
+
                 if ($id){
                     $exec_time = time();
                     $beginTime = date('Y-m-d H:i:s');
@@ -230,6 +233,7 @@ class TestUeThreeRoadCondituonAction extends \CAction
                         ->addData([
                             'content' => $data,
                             'insert_time' => date('Y-m-d H:i:s'),
+                            'flag' => $this->flag,
                         ])
                         ->execute();
                     if ($id){
@@ -282,9 +286,9 @@ class TestUeThreeRoadCondituonAction extends \CAction
 //            "keywords" => '一环路',
 //            "city" => '510100',
 //        ]);
-
+//
 //        $allPoints = $allPoints['roads'];
-
+//
 //        return ['list' => $list,'allPoints' => $allPoints];
 
         return ['list' => $list];

@@ -1,0 +1,3 @@
+说明：该目录下存放公共的配置文件
+
+1、TestDataBaseConnectListenerInterface为test库的连接信息

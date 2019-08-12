@@ -264,7 +264,7 @@ Vivus.prototype.setCallback = function (callback) {
 /**
  * Map the svg, path by path.
  * The method return nothing, it just fill the
- * `map` array. Each item in this array represent
+ * `map` arrays. Each item in this arrays represent
  * a path element from the SVG, with informations for
  * the animation.
  *
